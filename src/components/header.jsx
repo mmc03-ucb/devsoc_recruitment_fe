@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/freeRoomsLogo.png";
 
 const Header = () => {
+  // Inline style for icons to maintain consistent look
   const iconStyle = {
     fontSize: "24px",
     cursor: "pointer",
@@ -9,6 +10,7 @@ const Header = () => {
     fontVariationSettings: "'FILL' 1",
   };
 
+  // Container style for individual icon elements
   const iconContainerStyle = {
     border: "0.5px solid #EF7021",
     padding: "5px",
@@ -17,6 +19,7 @@ const Header = () => {
     borderRadius: "4px",
   };
 
+  // Button style for filter and sort buttons
   const buttonStyle = {
     display: "flex",
     alignItems: "center",
@@ -29,10 +32,13 @@ const Header = () => {
   return (
     <>
       <header style={styles.header}>
+        {/* Left section containing the logo and title */}
         <div style={styles.left}>
           <img src={logo} alt="Freerooms Logo" style={styles.logo} />
           <span style={styles.text}>Freerooms</span>
         </div>
+
+        {/* Right section with icons */}
         <div style={styles.right}>
           <div style={iconContainerStyle}>
             <span className="material-symbols-outlined" style={iconStyle}>search</span>
@@ -48,15 +54,22 @@ const Header = () => {
           </div>
         </div>
       </header>
+
+      {/* Search and filter container placed below header */}
       <div style={styles.searchContainer}>
+        {/* Filter button */}
         <div style={buttonStyle}>
           <span className="material-symbols-outlined" style={iconStyle}>filter_alt</span>
           <span style={styles.buttonText}>Filters</span>
         </div>
+
+        {/* Search bar with an input field */}
         <div style={styles.searchBar}>
           <span className="material-symbols-outlined" style={styles.searchIcon}>search</span>
           <input type="text" placeholder="Search for a building..." style={styles.searchInput} />
         </div>
+
+        {/* Filter and Sort button */}
         <div style={buttonStyle}>
           <span className="material-symbols-outlined" style={iconStyle}>filter_list</span>
           <span style={styles.buttonText}>Sort</span>
@@ -68,17 +81,17 @@ const Header = () => {
 
 const styles = {
   header: {
-    position: "fixed",
+    position: "fixed", // Keeps the header at the top of the screen
     top: 0,
     left: 0,
     width: "100%",
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-between", // Space between logo and icons
     padding: "10px 20px",
     borderBottom: "0.5px solid #ccc",
-    zIndex: 1000,
+    zIndex: 1000, // Keeps it on top of other elements
     boxSizing: "border-box",
-    backgroundColor: "white",
+    backgroundColor: "white", // Prevents grid from overlaying
   },
   left: {
     display: "flex",
@@ -103,7 +116,7 @@ const styles = {
     alignItems: "center",
     padding: "10px 20px",
     position: "fixed",
-    top: "60px",
+    top: "60px",  // Push it below the header
     left: 0,
     width: "100%",
     zIndex: 999,
@@ -122,8 +135,7 @@ const styles = {
   },
   searchInput: {
     width: "100%",
-    boxSizing: "border-box",
-    border: "none",
+    border: "none", // Remove default input border
     outline: "none",
   },
   searchIcon: {
