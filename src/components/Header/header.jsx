@@ -1,7 +1,7 @@
 // Header.js
 import React from "react";
 import logo from "/src/assets/freeRoomsLogo.png";
-import "./Header.css"; // Import the CSS file
+import "./Header.css";
 
 const Header = () => {
   return (

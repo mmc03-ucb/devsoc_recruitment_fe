@@ -2,10 +2,10 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
-  margin-top: 80px;
+  padding: 20px 20px;
+  margin-top: 100px;
 }
 
 .grid-item {
@@ -13,7 +13,7 @@
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
-  height: 350px;
+  height: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -57,4 +57,21 @@
   text-align: left;
   border-radius: 8px;
   font-size: 12px;
+}
+
+/* Media query for screens below 769px */
+@media (max-width: 768px) {
+  .grid-item {
+    height: auto;
+    /* Allow height to adjust based on content */
+    flex-direction: column;
+    /* Change to horizontal layout */
+  }
+
+  .building-image {
+    width: 100%;
+    /* Adjust image width for horizontal layout */
+    height: auto;
+    /* Allow image height to adjust */
+  }
 }

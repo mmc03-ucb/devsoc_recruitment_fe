@@ -1,6 +1,6 @@
 // BuildingGrid.js
 import React, { useEffect, useState } from "react";
-import "./BuildingGrid.css"; // Import the CSS file
+import "./BuildingGrid.css";
 
 const BuildingGrid = () => {
   const [buildings, setBuildings] = useState([]);
