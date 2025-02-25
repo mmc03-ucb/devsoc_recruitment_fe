@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/header";
-import BuildingGrid from "./components/buildingGrid";
+import Header from "./components/Header/header";
+import BuildingGrid from "./components/buildingGrid/buildingGrid";
 
 function App() {
   return (
