@@ -32,7 +32,7 @@ const styles = {
     gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
     gap: "20px",
     padding: "20px",
-    marginTop: "100px",
+    marginTop: "80px",
   },
   gridItem: {
     position: "relative",

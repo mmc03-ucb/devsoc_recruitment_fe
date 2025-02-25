@@ -78,6 +78,7 @@ const styles = {
     borderBottom: "0.5px solid #ccc",
     zIndex: 1000,
     boxSizing: "border-box",
+    backgroundColor: "white",
   },
   left: {
     display: "flex",
@@ -107,6 +108,7 @@ const styles = {
     width: "100%",
     zIndex: 999,
     boxSizing: "border-box",
+    backgroundColor: "white",
   },
   searchBar: {
     display: "flex",
