@@ -39,11 +39,15 @@ const styles = {
     borderRadius: "8px",
     overflow: "hidden",
     textAlign: "center",
+    height: "350px",
+    border: "0.5px solid #EF7021",
+    display: "flex",
+    flexDirection: "column",
   },
   buildingImage: {
     width: "100%",
-    height: "auto",
-    display: "block",
+    flexGrow: 1,
+    objectFit: "cover",
   },
   roomsAvailable: {
     position: "absolute",
