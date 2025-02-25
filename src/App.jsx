@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/Header"; // Import the Header component
+import Header from "./components/header";
 
 function App() {
   return (
     <>
-      <Header /> {/* Include the Header component */}
+      <Header />
     </>
   );
 }
