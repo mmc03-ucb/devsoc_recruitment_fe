@@ -29,7 +29,8 @@ const BuildingCard = ({ building }) => {
       <img src={imagePath} alt={building.name} className="building-image" />
       <div className="rooms-available">
         <span className="green-dot"></span>
-        {building.rooms_available} rooms available
+        <span class="room-count">{building.rooms_available}</span>
+        <span class="room-text">rooms available</span>
       </div>
       <div className="building-name">{building.name}</div>
     </div>

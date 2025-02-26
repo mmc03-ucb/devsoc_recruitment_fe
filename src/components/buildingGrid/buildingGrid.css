@@ -5,7 +5,6 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px 20px;
-  margin-top: 100px;
 }
 
 .grid-item {
@@ -44,6 +43,10 @@
   margin-right: 5px;
 }
 
+.room-count {
+  margin-right: 2px;
+}
+
 .building-name {
   position: absolute;
   bottom: 10px;
@@ -59,19 +62,47 @@
   font-size: 12px;
 }
 
-/* Media query for screens below 769px */
-@media (max-width: 768px) {
+/* Media query for tablets 426px to 768px */
+@media (min-width: 426px) and (max-width: 768px) {
   .grid-item {
     height: auto;
     /* Allow height to adjust based on content */
     flex-direction: column;
     /* Change to horizontal layout */
   }
+}
+
+@media (max-width: 425px) {
+  .header-text {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    position: relative;
+    border-radius: 8px;
+    height: 100px;
+  }
 
   .building-image {
-    width: 100%;
-    /* Adjust image width for horizontal layout */
-    height: auto;
-    /* Allow image height to adjust */
+    transform: translate(0%, -50%);
+  }
+
+  .building-name {
+    position: absolute;
+    bottom: 40px;
+    left: 10%;
+    transform: translateX(-10%);
+    width: 50%;
+    color: white;
+    background: none;
+    padding: 0px;
+  }
+
+  .room-text {
+    display: none;
   }
 }
