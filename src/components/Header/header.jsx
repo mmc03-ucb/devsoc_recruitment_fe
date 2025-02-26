@@ -1,14 +1,29 @@
 // Header.js
-import React from "react";
-import logo from "/src/assets/freeRoomsLogo.png";
+import React, { useState } from "react";
+import openDoorLogo from "/src/assets/freeRoomsLogo.png";
+import closedDoorLogo from "/src/assets/freeroomsDoorClosed.png";
 import "./Header.css";
 
 const Header = () => {
+  const [logoSrc, setLogoSrc] = useState(openDoorLogo);
+
+  const toggleLogo = () => {
+    setLogoSrc((prevSrc) =>
+      prevSrc === openDoorLogo ? closedDoorLogo : openDoorLogo
+    );
+  };
+
   return (
     <>
       <header className="header">
         <div className="header-left">
-          <img src={logo} alt="Freerooms Logo" className="header-logo" />
+          <img
+            src={logoSrc}
+            alt="Freerooms Logo"
+            className="header-logo"
+            onClick={toggleLogo}
+            style={{ cursor: "pointer" }}
+          />
           <span className="header-text">Freerooms</span>
         </div>
         <div className="header-right">
